@@ -48,6 +48,9 @@
 		79404DD92030462B00BEA9EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		79404DDB2030464F00BEA9EE /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
 		79404DDD2030482600BEA9EE /* EarlGrey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
+		79404DDF20304C8200BEA9EE /* benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = benchmark.h; sourceTree = "<group>"; };
+		79404DE020304CEF00BEA9EE /* probes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = probes.h; sourceTree = "<group>"; };
+		79404DE120304D6C00BEA9EE /* InstrSampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InstrSampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		811EB41A59F57CB57B9692D8 /* Pods-InstrSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstrSampleApp/Pods-InstrSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AD8EC51EEA3F8F36B7A2C195 /* Pods_InstrSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstrSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +98,7 @@
 		79404DB52030435F00BEA9EE /* InstrSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				79404DDF20304C8200BEA9EE /* benchmark.h */,
 				79404DDB2030464F00BEA9EE /* Locations.plist */,
 				79404DB62030435F00BEA9EE /* AppDelegate.swift */,
 				79404DB82030435F00BEA9EE /* ViewController.swift */,
@@ -103,6 +107,8 @@
 				79404DBF2030435F00BEA9EE /* LaunchScreen.storyboard */,
 				79404DD62030461A00BEA9EE /* Main.storyboard */,
 				79404DC22030435F00BEA9EE /* Info.plist */,
+				79404DE020304CEF00BEA9EE /* probes.h */,
+				79404DE120304D6C00BEA9EE /* InstrSampleApp-Bridging-Header.h */,
 			);
 			path = InstrSampleApp;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					79404DB22030435F00BEA9EE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					79404DCB203043DC00BEA9EE = {
@@ -511,11 +518,14 @@
 			baseConfigurationReference = 811EB41A59F57CB57B9692D8 /* Pods-InstrSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InstrSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruenzuo.InstrSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstrSampleApp/InstrSampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -526,11 +536,13 @@
 			baseConfigurationReference = 4C0E2E12FBFEE0C974F8F237 /* Pods-InstrSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InstrSampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruenzuo.InstrSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InstrSampleApp/InstrSampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

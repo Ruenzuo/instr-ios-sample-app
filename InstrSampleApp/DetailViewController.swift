@@ -15,6 +15,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet var locationLabel: UILabel?
 
     required init?(coder aDecoder: NSCoder) {
+        MOBBENCHMARK_BEGIN(String(describing: DetailViewController.self))
         super.init(coder: aDecoder)
     }
 
@@ -27,6 +28,8 @@ class DetailViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        MOBBENCHMARK_END(String(describing: DetailViewController.self))
     }
 
 }

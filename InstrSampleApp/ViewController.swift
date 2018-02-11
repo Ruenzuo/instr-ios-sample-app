@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView?
 
     required init?(coder aDecoder: NSCoder) {
+        MOBBENCHMARK_BEGIN(String(describing: ViewController.self))
         let path = Bundle.main.path(forResource: "Locations", ofType: "plist")
         dataSource = NSArray.init(contentsOfFile: path!) as! [Dictionary<String,String>]
         super.init(coder: aDecoder)
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        MOBBENCHMARK_END(String(describing: ViewController.self))
     }
 
     override func didReceiveMemoryWarning() {
