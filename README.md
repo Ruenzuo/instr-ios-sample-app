@@ -4,3 +4,6 @@
 
 1. Add `instr` to your Gemfile.
 2. Run `bundle exec instr generate-header benchmark` and move the header to a proper place.
+3. Import header to Xcode project.  
+   Optional: create a custom header with simple API for auto generated methods.  
+   If your project uses Swift: Add header to Swift bridging header.  
