@@ -7,29 +7,23 @@
 //
 
 import XCTest
+import EarlGrey
 
-class InstrSampleAppTests: XCTestCase {
-    
+class EarlGreyTests: XCTestCase {
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testDetailView() {
+        EarlGrey.select(elementWithMatcher: grey_keyWindow()).assert(grey_sufficientlyVisible())
+        EarlGrey.select(elementWithMatcher: grey_text("Berlin")).perform(grey_tap())
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("CITY_ID")).assert(grey_text("Berlin"))
+        EarlGrey.select(elementWithMatcher: grey_accessibilityID("LOCATION_ID")).assert(grey_text("52°30′26″N 13°8′45″E"))
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
 }
