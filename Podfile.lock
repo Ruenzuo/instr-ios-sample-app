@@ -1,0 +1,20 @@
+PODS:
+  - EarlGrey (1.12.1)
+  - GCDWebServer (3.4.2):
+    - GCDWebServer/Core (= 3.4.2)
+  - GCDWebServer/Core (3.4.2)
+  - instrserver (0.1.0):
+    - GCDWebServer (~> 3.4)
+
+DEPENDENCIES:
+  - EarlGrey (~> 1.12.1)
+  - instrserver (~> 0.1.0)
+
+SPEC CHECKSUMS:
+  EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
+  GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
+  instrserver: abd6a00d54ff576311149e14ebbad2e61cfb8804
+
+PODFILE CHECKSUM: cc347ebe57ac59852178b77b617442edfeeca0e2
+
+COCOAPODS: 1.4.0
