@@ -7,3 +7,4 @@
 3. Import header to Xcode project.  
    Optional: create a custom header with simple API for auto generated methods.  
    If your project uses Swift: Add header to Swift bridging header.  
+4. Place static probes in your project, marking the places you want to benchmark.
